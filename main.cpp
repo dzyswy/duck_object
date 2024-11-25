@@ -51,6 +51,16 @@ int main(int argc, char* argv[])
     printf("head: %08x\n", head[0]);
     printf("head: %08x\n", head[1]);
 
+    for (int i = 0; i < max_size; i++)
+    {
+        buff[i] = allocator.allocate();
+    }
+
+    for (int i = 0; i < max_size; i++)
+    {
+        printf("%d: data_=%d\n", i, buff[i]->data_);
+    }
+
 
     for (int i = 0; i < max_size; i++)
     {
